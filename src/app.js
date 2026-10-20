@@ -3,7 +3,10 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.json({ message: "Hello from my DevOps pipeline!", version: process.env.APP_VERSION || "dev" });
+  res.json({
+    message: "Hello from Ricky's DevOps pipeline!",
+    version: process.env.APP_VERSION || "dev",
+  });
 });
 
 // Used by Docker/AWS health checks and monitoring
